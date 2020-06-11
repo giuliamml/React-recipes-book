@@ -1,0 +1,226 @@
+$base-color: #e5e5e5;
+$full-width: 100%;
+$full-height: 100%;
+
+%navigation-font {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+%heading-style {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 84px;
+  margin: 0;
+}
+
+%p-style {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: #595959;
+  margin: 0;
+}
+
+%cta-button-style {
+  border: 2px solid #ffc700;
+  box-sizing: border-box;
+  background-color: transparent;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 173px;
+  height: 38px;
+  cursor: pointer;
+}
+
+%link-style {
+  cursor: pointer;
+}
+
+body {
+  width: $full-width;
+  height: $full-height;
+
+  .landing-page-wrapper {
+    background-color: $base-color;
+    width: $full-width;
+    height: $full-height;
+
+    .hero-wrapper {
+      width: $full-width;
+      height: 100vh;
+
+      .navigation {
+        width: $full-width;
+        position: absolute;
+        float: right;
+        top: 1%;
+
+        .navigation-sections {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          width: $full-width;
+
+          li#navigation {
+            padding: 2%;
+            display: inline-block;
+            @extend %navigation-font;
+          }
+
+          a {
+            @extend %link-style;
+          }
+        }
+      }
+
+      .hero-text {
+        position: absolute;
+        width: $full-width;
+        top: 40%;
+
+        h1 {
+          @extend %heading-style;
+          position: relative;
+          left: 20%;
+          color: #ffffff;
+        }
+
+        button.cta {
+          @extend %cta-button-style;
+          position: relative;
+          left: 50%;
+          transform: translate(-50%, 50%);
+        }
+      }
+    }
+
+    .content-wrapper {
+      width: $full-width;
+      height: $full-height;
+      display: flex;
+      flex-direction: column;
+
+      .content-sections {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: $full-width;
+
+        .content-text {
+          width: $full-width;
+          place-self: center;
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr 1fr;
+
+          h1 {
+            @extend %heading-style;
+            color: #393939;
+            padding: 0 10%;
+          }
+
+          p {
+            @extend %p-style;
+            padding: 0 10%;
+          }
+          img {
+            justify-self: end;
+            padding: 0 10%;
+
+            &:nth-of-type(1) {
+              justify-self: start;
+            }
+          }
+        }
+
+        .content-image {
+          width: $full-width;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .offer-wrapper {
+      width: $full-width;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        filter: grayscale(80%);
+      }
+
+      .offer-text {
+        width: $full-width;
+        height: 100vh;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        align-items: center;
+        background-color: black;
+        opacity: 0.6;
+        justify-items: center;
+
+        h1 {
+          @extend %heading-style;
+          color: #ffc700;
+          text-transform: lowercase;
+          text-align: center;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        #offer {
+          @extend %cta-button-style;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 50%;
+        }
+      }
+    }
+
+    .footer {
+      width: $full-width;
+      height: 50vh;
+      background-image: url("./images/footer.svg");
+      background-repeat: no-repeat;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      ul {
+        margin: 0;
+        list-style: none;
+        position: relative;
+        top:40%;
+
+        li{
+            font-size: 14px;
+            line-height: 25px;
+            color: #FFFFFF;
+        }
+      }
+      li:nth-of-type(1) {
+        font-size: 24px;
+        line-height: 30px;
+        color: #ffc700;
+        padding-bottom: 5%;
+      }
+    }
+  }
+}
