@@ -10,18 +10,18 @@ const Navigation = () => {
     <div className="navigation">
       <ul className="navigation-sections">
         <li id="navigation">
-          menu
-          <Link to="/menu" />{" "}
+          <Link to="/home">Menu</Link>
         </li>
         <li id="navigation">
-          recipes
-          <Link to="/recipes" />
+          <Link to="/recipes">Recipes</Link>
         </li>
         <li id="navigation">wine</li>
         <li id="navigation">gifts</li>
         <li id="navigation">market</li>
         <li id="navigation">
-          <img src={cart} />
+          <Link to="/cart">
+            <img src={cart} />
+          </Link>
         </li>{" "}
       </ul>
     </div>

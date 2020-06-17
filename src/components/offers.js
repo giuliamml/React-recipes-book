@@ -7,7 +7,7 @@ import img5 from "../images/image5.svg";
 const Offers = () => {
   return (
     <div className="offer-wrapper">
-      <img src={img5} />
+      {/* <img src={img5} /> */}
       <div className="offer-text">
         <h1>{"homemade burger"}</h1>
         <button id="offer">{"get started"}</button>
