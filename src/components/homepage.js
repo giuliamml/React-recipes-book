@@ -1,6 +1,11 @@
 import React from "react";
+//components
+import Navigation from "./navigation";
+import Header from "./header";
+import Offers from "./offers";
+import Footer from "./footer";
+//media-files
 import img1 from "../images/image1.svg";
-import cart from "../images/cart.svg";
 import img2 from "../images/image2.svg";
 import img3 from "../images/image3.svg";
 import img4 from "../images/image4.svg";
@@ -10,41 +15,10 @@ import snack from "../images/Shape3.svg";
 import cheese from "../images/Shape4.svg";
 import fruit from "../images/Shape5.svg";
 import carrot from "../images/Shape6.svg";
-import img5 from "../images/image5.svg";
 
 function Homepage() {
-  return (
-    <div className="landing-page-wrapper">
-      <div className="hero-wrapper">
-        <img src={img1} />
-        <div className="navigation">
-          <ul className="navigation-sections">
-            <li id="navigation">
-              <a>{"on the menu"}</a>
-            </li>
-            <li id="navigation">
-              <a>{"recipes"}</a>
-            </li>
-            <li id="navigation">
-              <a>{"wine"}</a>
-            </li>
-            <li id="navigation">
-              <a>{"gifts"}</a>
-            </li>
-            <li id="navigation">
-              <a>{"market"}</a>
-            </li>
-            <li id="navigation">
-              <img src={cart} />
-            </li>{" "}
-          </ul>
-        </div>
-        <div className="hero-text">
-          <h1>{"Order our top-rated recipes today!"}</h1>
-          <button className="cta">{"get started"}</button>
-        </div>
-      </div>
-
+  const Content = () => {
+    return (
       <div className="content-wrapper">
         <div class="content-sections">
           <div className="content-text">
@@ -92,45 +66,16 @@ function Homepage() {
           </div>
         </div>
       </div>
+    );
+  };
 
-      <div className="offer-wrapper">
-        <img src={img5} />
-        <div className="offer-text">
-          <h1>{"homemade burger"}</h1>
-          <button id="offer">{"get started"}</button>
-        </div>
-      </div>
-
-      <div className="footer">
-        <ul id='categories'>
-            <li>{"Categories"}</li>
-            <li>{"About us"}</li>
-            <li>{"Testimonial"}</li>
-            <li>{"Contact"}</li>
-            <li>{"Journal"}</li>
-            <li>{"Privacy Policy"}</li>
-        </ul>
-        <ul id='partners'>
-            <li>{'Partners'}</li>
-            <li>{"Support"}</li>
-            <li>{"Shipping & Returns"}</li>
-            <li>{"Size Guide"}</li>
-            <li>{"Product Care"}</li>
-        </ul>
-        <ul id='contacts'>
-            <li>{'Contact Us'}</li>
-            <li>{"26A Pagoda St, TANGS, Singapore, 058187"}</li>
-            <li>{"+65 62215462"}</li>
-        </ul>
-        <ul id='socials'>
-            <li>{'Follow Us'}</li>
-            <li>{'facebook'}</li>
-            <li>{'instagram'}</li>
-            <li>{'twitter'}</li>
-            <li>{'whatsapp'}</li>
-        </ul>
-
-      </div>
+  return (
+    <div className="landing-page-wrapper">
+      <Navigation />
+      <Header />
+      <Content />
+      <Offers />
+      <Footer />
     </div>
   );
 }

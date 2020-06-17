@@ -58,55 +58,6 @@ body {
     width: $full-width;
     height: $full-height;
 
-    .hero-wrapper {
-      width: $full-width;
-      height: 100vh;
-
-      .navigation {
-        width: $full-width;
-        position: absolute;
-        float: right;
-        top: 1%;
-
-        .navigation-sections {
-          list-style-type: none;
-          padding: 0;
-          margin: 0;
-          width: $full-width;
-
-          li#navigation {
-            padding: 2%;
-            display: inline-block;
-            @extend %navigation-font;
-          }
-
-          a {
-            @extend %link-style;
-          }
-        }
-      }
-
-      .hero-text {
-        position: absolute;
-        width: $full-width;
-        top: 40%;
-
-        h1 {
-          @extend %heading-style;
-          position: relative;
-          left: 20%;
-          color: #ffffff;
-        }
-
-        button.cta {
-          @extend %cta-button-style;
-          position: relative;
-          left: 50%;
-          transform: translate(-50%, 50%);
-        }
-      }
-    }
-
     .content-wrapper {
       width: $full-width;
       height: $full-height;
@@ -152,74 +103,6 @@ body {
             height: auto;
           }
         }
-      }
-    }
-
-    .offer-wrapper {
-      width: $full-width;
-      position: relative;
-      overflow: hidden;
-
-      img {
-        filter: grayscale(80%);
-      }
-
-      .offer-text {
-        width: $full-width;
-        height: 100vh;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        align-items: center;
-        background-color: black;
-        opacity: 0.6;
-        justify-items: center;
-
-        h1 {
-          @extend %heading-style;
-          color: #ffc700;
-          text-transform: lowercase;
-          text-align: center;
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-
-        #offer {
-          @extend %cta-button-style;
-          position: relative;
-          left: 50%;
-          transform: translateX(-50%);
-          top: 50%;
-        }
-      }
-    }
-
-    .footer {
-      width: $full-width;
-      height: 50vh;
-      background-image: url("./images/footer.svg");
-      background-repeat: no-repeat;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-
-      ul {
-        margin: 0;
-        list-style: none;
-        position: relative;
-        top:40%;
-
-        li{
-            font-size: 14px;
-            line-height: 25px;
-            color: #FFFFFF;
-        }
-      }
-      li:nth-of-type(1) {
-        font-size: 24px;
-        line-height: 30px;
-        color: #ffc700;
-        padding-bottom: 5%;
       }
     }
   }

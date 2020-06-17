@@ -1,0 +1,33 @@
+$base-color: #e5e5e5;
+$full-width: 100%;
+$full-height: 100%;
+
+%navigation-font {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.navigation {
+  width: $full-width;
+  position: absolute;
+  float: right;
+  top: 1%;
+
+  .navigation-sections {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: $full-width;
+
+    li#navigation {
+      padding: 2%;
+      display: inline-block;
+      @extend %navigation-font;
+      cursor: pointer;
+    }
+  }
+}
