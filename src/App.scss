@@ -49,9 +49,12 @@ $full-height: 100%;
   cursor: pointer;
 }
 
-body {
+.App {
   width: $full-width;
   height: $full-height;
+  background-color: $base-color;
+
+
 
   .landing-page-wrapper {
     background-color: $base-color;

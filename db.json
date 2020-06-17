@@ -1,0 +1,94 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Falafel Burgers with Feta Cucumber Sauce",
+      "readyInMinutes": 50,
+      "servings": 6,
+      "sourceUrl": "https://www.cinnamonspiceandeverythingnice.com/falafel-burgers-with-feta-tzatziki-sauce/",
+      "openLicense": 0,
+      "image": "https://www.deliciousmagazine.co.uk/wp-content/uploads/2019/06/veggie-burger-768x960.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Bison Burger",
+      "readyInMinutes": 45,
+      "servings": 6,
+      "sourceUrl": "https://www.simplyrecipes.com/recipes/buffalo_burger/",
+      "openLicense": 0,
+      "image": "https://ediblesarasota.ediblecommunities.com/sites/default/files/styles/recipe_banner/public/images/recipe/bison-burger-1.jpg?itok=e-pQ0SpB&c=f5c79803a62ad144574d1093f4d5db2e"
+    },
+    {
+      "id": 3,
+      "title": "Hawaiian Pork Burger",
+      "readyInMinutes": 40,
+      "servings": 4,
+      "sourceUrl": "https://www.simplyrecipes.com/recipes/hawaiian_pork_burger/",
+      "openLicense": 0,
+      "image": "https://img.sunset02.com/sites/default/files/image/recipes/su/11/07/hawaiian-burger-su-x.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Blue Cheese Burgers",
+      "readyInMinutes": 55,
+      "servings": 4,
+      "sourceUrl": "https://www.simplyrecipes.com/recipes/blue_cheese_burgers/",
+      "openLicense": 0,
+      "image": "https://img.taste.com.au/N-Pf9gYs/w720-h480-cfill-q80/taste/2016/11/blue-cheese-burger-with-pear-and-red-cabbage-slaw-109747-1.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Carrot & sesame burgers",
+      "readyInMinutes": 50,
+      "servings": 6,
+      "sourceUrl": "https://www.bbcgoodfood.com/recipes/11011/carrot-and-sesame-burgers",
+      "openLicense": 0,
+      "image": "Carrot---sesame-burgers-219957.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Turkey Zucchini Burger with Garlic Mayo",
+      "readyInMinutes": 45,
+      "servings": 6,
+      "sourceUrl": "https://www.simplyrecipes.com/recipes/turkey_zucchini_burger_with_garlic_mayo/",
+      "openLicense": 0,
+      "image": "Turkey-Zucchini-Burger-with-Garlic-Mayo-607109.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Banh Mi Burgers with Spicy Sriracha Mayo",
+      "readyInMinutes": 35,
+      "servings": 4,
+      "sourceUrl": "http://littlespicejar.com/banh-mi-burgers-with-spicy-sriracha-mayo/",
+      "openLicense": 0,
+      "image": "https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/smoky_roast_carrot_00838_16x9.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Halloumi aubergine burgers with harissa relish",
+      "readyInMinutes": 20,
+      "servings": 4,
+      "sourceUrl": "https://www.bbcgoodfood.com/recipes/2196638/halloumi-aubergine-burgers-with-harissa-relish",
+      "openLicense": 0,
+      "image": "Hhttps://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--983468_11.jpg?itok=x6FIzNTj"
+    },
+    {
+      "id": 9,
+      "title": "Grilled Beef and Mushroom Burger",
+      "readyInMinutes": 30,
+      "servings": 3,
+      "sourceUrl": "https://www.simplyrecipes.com/recipes/grilled_beef_and_mushroom_burger/",
+      "openLicense": 0,
+      "image": "https://biancazapatka.com/wp-content/uploads/2019/04/vegan-mozzarella-cashew-cheese-mushroom-burger-recipe-easy-melty-meatless-pilze-rezept-zwiebeln-onion.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Herbed Turkey Burger",
+      "readyInMinutes": 30,
+      "servings": 8,
+      "sourceUrl": "https://www.simplyrecipes.com/recipes/herbed_turkey_burger/",
+      "openLicense": 0,
+      "image": "https://www.womansworld.com/wp-content/uploads/2018/12/greek-turkey-burger-recipe.jpg?w=715"
+    }
+  ]
+}
