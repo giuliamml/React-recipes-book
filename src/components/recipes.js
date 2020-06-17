@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 
-const Recipes = () => {
+import styles from "./recipes.scss";
+
+const Recipes = (props) => {
+
   const [recipes, setRecipes] = useState([]);
   const getData = async () => {
     let response = await fetch("http://localhost:3001/recipes");
     let data = await response.json();
-    console.log(data)
+    console.log(data);
     setRecipes([...recipes, ...data]);
   };
 
@@ -14,20 +18,27 @@ const Recipes = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Explore our menu</h1>
-      <p>
-        choose from an ever changing mix of meat, fish, Beyond Meat, WW
-        Approved, Diabetes Friendly recipes and health-conscious offerings{" "}
-      </p>
-      {recipes.map((recipe) => {
-        return (
-          <div className="recipe-wrapper">
-            <img src={recipe.image} alt="recipe-img" />
-            <li>{recipe.title}</li>
-          </div>
-        );
-      })}
+    <div className="PLP-wrapper">
+      <div className="PLP-header">
+        <h1>Explore our menu</h1>
+        <p>
+          Choose from an ever changing mix of meat, fish, Beyond Meat, WW
+          Approved, Diabetes Friendly recipes and health-conscious offerings{" "}
+        </p>
+      </div>
+
+      <div className="recipes-wrapper">
+        {recipes.map((recipe) => {
+          return (
+            <Link to={`/recipe/${recipe.id}`}>
+              <div className="recipe">
+                <img src={recipe.image} alt="recipe-img" />
+                <p>{recipe.title}</p>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 };
