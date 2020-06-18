@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, useParams } from "react-router-dom";
 
 import styles from "./recipes.scss";
 
-const Recipes = (props) => {
+const Recipes = () => {
 
   const [recipes, setRecipes] = useState([]);
+
   const getData = async () => {
     let response = await fetch("http://localhost:3001/recipes");
     let data = await response.json();
