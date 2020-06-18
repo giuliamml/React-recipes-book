@@ -32,8 +32,8 @@ const RecipeDetails = (props) => {
 
   const CartCount = () => {
     return (
-      <div className='cart-count'>
-       <p>{localStorage.length}</p>
+      <div className="cart-count">
+        <p>{localStorage.length}</p>
       </div>
     );
   };

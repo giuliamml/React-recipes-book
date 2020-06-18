@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Cart from './components/cart'
 
 //components
 import Homepage from "./components/homepage";
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/home" component={Homepage}></Route>
         <Route exact path="/recipes" component={ProductsListingPage}></Route>
         <Route exact path="/recipe/:id" component={ProductPage} id={id}></Route>
+        <Route exact path="/cart" component={Cart} id={id}></Route>
       </Router>
     </div>
   );
