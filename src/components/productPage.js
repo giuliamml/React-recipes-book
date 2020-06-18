@@ -11,7 +11,7 @@ const ProductPage = (props) => {
   let id = props.match.params.id;
   return (
     <div className="PDP-wrapper">
-      <img src={background} alt="background" />
+      {/* <img src={background} alt="background" /> */}
       <RecipeDetails id={id} />
       <Offers />
       <Footer />
