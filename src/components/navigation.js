@@ -18,7 +18,7 @@ const Navigation = () => {
         <li id="navigation">wine</li>
         <li id="navigation">gifts</li>
         <li id="navigation">market</li>
-        <li id="navigation">
+        <li id="navigation" className='cart'>
           <Link to="/cart">
             <img src={cart} />
           </Link>

@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Link, Route, useParams } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  useParams,
+} from "react-router-dom";
 
 import styles from "./recipes.scss";
+import time from "../images/time.svg";
 
 const Recipes = () => {
-
   const [recipes, setRecipes] = useState([]);
 
   const getData = async () => {
@@ -35,6 +40,11 @@ const Recipes = () => {
               <div className="recipe">
                 <img src={recipe.image} alt="recipe-img" />
                 <p>{recipe.title}</p>
+
+                <p>
+                  {" "}
+                  <img src={time} alt="time"></img> {recipe.readyInMinutes}
+                </p>
               </div>
             </Link>
           );

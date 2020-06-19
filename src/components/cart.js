@@ -1,13 +1,16 @@
 import React from "react";
-import OrderDetails from './orderDetails.js'
-import Footer from './footer'
+import OrderDetails from "./orderDetails.js";
+import Footer from "./footer";
+import CartCount from './cartCount'
 
 const Cart = () => {
-    console.log()
-  return <div>
-      <OrderDetails/>
-      <Footer/>
-  </div>;
+  return (
+    <div>
+        <CartCount/>
+      <OrderDetails />
+      <Footer />
+    </div>
+  );
 };
 
 export default Cart;

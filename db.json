@@ -52,7 +52,7 @@
       "title": "Hawaiian Pork Burger",
       "readyInMinutes": 40,
       "servings": 4,
-      "price": 16.0,
+      "price": 16,
       "calories": 1600,
       "description": "A Hawaiian-inspired pork burger with ground ginger and green onion in the patty, topped with barbecue sauce, grilled pineapple and ham.",
       "sourceUrl": "https://www.simplyrecipes.com/recipes/hawaiian_pork_burger/",
@@ -90,10 +90,8 @@
       "price": 15.5,
       "ingredients": [
         "750g carrots",
-
         "410g can chickpeas",
         "1 small onion",
-
         "2 tbsp tahini paste",
         "1 tsp ground cumin",
         "1 egg",
@@ -157,7 +155,7 @@
       "readyInMinutes": 20,
       "servings": 4,
       "calories": 1400,
-      "price": 13.0,
+      "price": 13,
       "ingredients": [
         "2½ tbsp olive oil",
         "2 onions",
@@ -226,13 +224,14 @@
   ],
   "users": [
     {
-      "title": "",
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "password": "",
-      "mobileNumber": 0,
-      "postcode": ""
+      "title": "Mr",
+      "firstName": "John",
+      "lastName": "Black",
+      "email": "johnblack@gmail.com",
+      "password": "12345t",
+      "mobileNumber": "07426490345",
+      "postcode": "W9 5FG",
+      "id": 1
     }
   ]
 }

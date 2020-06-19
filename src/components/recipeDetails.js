@@ -3,6 +3,7 @@ import ingredientsBackground from "../images/ingredients.jpg";
 import time from "../images/time.svg";
 import tools from "../images/tools.svg";
 import apple from "../images/apple.svg";
+import CartCount from './cartCount'
 
 const RecipeDetails = (props) => {
   let id = props.id;
@@ -31,13 +32,7 @@ const RecipeDetails = (props) => {
     setCart({ stateComponent: true });
   };
 
-  const CartCount = () => {
-    return (
-      <div className="cart-count">
-        <p>{localStorage.length}</p>
-      </div>
-    );
-  };
+
 
   useEffect(() => {
     getRecipe();

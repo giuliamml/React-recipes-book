@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import styles from "./orderDetails.scss";
 import background from "../images/background-nav.jpg";
 
@@ -7,6 +8,9 @@ const OrderDetails = () => {
 
   let recipesId = Object.keys(storage);
   console.log(recipesId);
+
+ 
+//fetch data given the ids
 
   const [userInfo, setUserInfo] = useState({
     title: "",
@@ -18,8 +22,6 @@ const OrderDetails = () => {
     postcode: "",
   });
 
-  //storage.getItem(recipesId)
-  //fetch data
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -32,47 +34,31 @@ const OrderDetails = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     postUser(userInfo);
+
   };
 
-  const postUser = (event) => {
-    event.preventDefault();
-    let newUser = {
-      title: userInfo.title,
-      firstName: userInfo.firstName,
-      lastName: userInfo.lastName,
-      email: userInfo.email,
-      password: userInfo.password,
-      mobileNumber: userInfo.mobileNumber,
-      postcode: userInfo.postcode,
-    };
-    return fetch(`http://localhost:3001/users`, {
-      method: "PATCH",
+  const postUser = async (user) => {
+
+    return await fetch("http://localhost:3001/users", {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newUser),
+      body: JSON.stringify(user),
     })
-      .then((response) => {
-        if (response.status === 200) {
-          return response.json();
-        } else {
-          return "Oops we couldn't update that!";
-        }
-      })
+      .then((response) => response.json())
 
-      .catch((error) => {
-        return "Oops we couldn't update that!";
-      });
+      .then((data) => data)
+      .catch((error) => console.log("Oops something went wrong!"));
   };
 
-  console.log(userInfo);
   return (
     <div>
       <img src={background} alt="background" />
       <div className="order-details-wrapper">
         <div class="user-form">
           <label>your details</label>
-          <form onChange={handleChange}>
+          <form onChange={handleChange} onSubmit={handleSubmit}>
             <select name="title" required>
               <option value="Mrs">Mrs</option>
               <option value="Miss">Miss</option>
@@ -116,9 +102,7 @@ const OrderDetails = () => {
               name="postcode"
               required
             ></input>
-            <button type="submit" onSubmit={handleSubmit}>
-              submit
-            </button>
+            <button type="submit">submit</button>
           </form>
         </div>
         <div className="order-summary">

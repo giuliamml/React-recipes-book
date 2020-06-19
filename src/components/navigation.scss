@@ -22,12 +22,41 @@ $full-height: 100%;
     padding: 0;
     margin: 0;
     width: $full-width;
+    position: relative;
 
-    li#navigation {
-      padding: 2%;
+    a {
+      text-decoration: none;
       display: inline-block;
+      text-transform: uppercase;
       @extend %navigation-font;
-      cursor: pointer;
+
+      li#navigation {
+        padding: 2%;
+        display: inline-block;
+        @extend %navigation-font;
+        cursor: pointer;
+
+       
+      } 
+
+
+     
     }
+
+    li.cart{
+      position: relative;
+      float: right;
+    }
+
+    li {
+      @extend %navigation-font;
+      display: inline-block;
+      padding:3%;
+      position: relative;
+
+
+    
+    }
+
   }
 }
