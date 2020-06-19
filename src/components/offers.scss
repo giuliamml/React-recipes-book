@@ -26,11 +26,13 @@
   position: relative;
   overflow: hidden;
 
-  img {
-    filter: grayscale(80%);
+  img#offer {
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    left: 5%;
   }
 
-  
   .offer-text {
     width: 100vw;
     height: 100vh;
@@ -38,8 +40,7 @@
     top: 50%;
     transform: translateY(-50%);
     align-items: center;
-    background-color: black;
-    opacity: 0.6;
+    background: rgba(0, 0, 0, 0.7);
     justify-items: center;
 
     h1 {
@@ -54,10 +55,10 @@
 
     #offer {
       @extend %cta-button-style;
-      position: relative;
+      position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: 50%;
+      bottom: 30%;
     }
   }
 }

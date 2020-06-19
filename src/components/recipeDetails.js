@@ -3,7 +3,7 @@ import ingredientsBackground from "../images/ingredients.jpg";
 import time from "../images/time.svg";
 import tools from "../images/tools.svg";
 import apple from "../images/apple.svg";
-import CartCount from './cartCount'
+import CartCount from "./cartCount";
 
 const RecipeDetails = (props) => {
   let id = props.id;
@@ -19,8 +19,6 @@ const RecipeDetails = (props) => {
     setRecipe(data);
     setIngredients([...ingredients, ...data.ingredients]);
   };
-  
-  
 
   const handleClick = (event) => {
     event.preventDefault();
@@ -34,38 +32,52 @@ const RecipeDetails = (props) => {
     setCart({ stateComponent: true });
   };
 
-
-
   useEffect(() => {
     getRecipe();
   }, []);
 
   return (
-    <div className="recipe-details-wrapper">
+    <div>
       {cart.stateComponent ? <CartCount /> : null}
-      <div className="recipe-details">
-        <div className="recipe-text">
-          <img src={time} alt="time" />
-          <p>{recipe.readyInMinutes} minutes</p>
-          <img src={tools} alt="time" />
-          <p>{recipe.servings} servings</p>
-          <img src={apple} alt="time" />
-          <p>{recipe.calories} cals/serving</p>
-          <p>{recipe.description}</p>
-          <p>{recipe.title}</p>
-          <button onClick={handleClick}>add to basket</button>
+      <div className="recipe-details-wrapper">
+        <div className="recipe-details">
+          <div className="recipe-text">
+            <ul>
+              <li>
+                {" "}
+                <img src={time} alt="time" />
+                <p>{recipe.readyInMinutes} minutes</p>
+              </li>
+              <li>
+                <img src={tools} alt="time" />
+                <p>{recipe.servings} servings</p>
+              </li>
+              <li>
+                <img src={apple} alt="time" />
+                <p>{recipe.calories} cals/serving</p>
+              </li>
+              <li>
+                <p>{recipe.description}</p>
+                <p>{recipe.title}</p>
+              </li>
+            </ul>
+
+            <button onClick={handleClick}>add to basket</button>
+          </div>
+          <div className="recipe-img">
+            <img src={recipe.image} alt="recipe-img" />
+          </div>
         </div>
-        <div className="recipe-img">
-          <img src={recipe.image} alt="recipe-img" />
+        <div className="recipe-ingredients">
+          <div className="ingredients-heading">
+            <h3>ingredients</h3>
+          </div>
+          <ul>
+            {ingredients.map((ingredient) => (
+              <li>{ingredient}</li>
+            ))}
+          </ul>
         </div>
-      </div>
-      <div className="recipe-ingredients">
-        <img src={ingredientsBackground} alt="background" />
-        <ul>
-          {ingredients.map((ingredient) => (
-            <li>{ingredient}</li>
-          ))}
-        </ul>
       </div>
     </div>
   );

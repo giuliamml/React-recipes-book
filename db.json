@@ -232,6 +232,16 @@
       "mobileNumber": "07426490345",
       "postcode": "W9 5FG",
       "id": 1
+    },
+    {
+      "title": "",
+      "firstName": "Giulia",
+      "lastName": "Mummolo",
+      "email": "mail@giuliamummolo.com",
+      "password": "asd",
+      "mobileNumber": "07426490423",
+      "postcode": "Mackeson Road",
+      "id": 2
     }
   ]
 }

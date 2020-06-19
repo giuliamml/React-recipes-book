@@ -6,7 +6,7 @@ import CartCount from './cartCount'
 const Cart = () => {
   return (
     <div>
-        <CartCount/>
+        {/* <CartCount/> */}
       <OrderDetails />
       <Footer />
     </div>

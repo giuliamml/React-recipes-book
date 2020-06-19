@@ -5,6 +5,7 @@ import background from "../images/background-nav.jpg";
 
 const OrderDetails = () => {
   let storage = window.localStorage;
+  let history = useHistory()
 
   let recipesId = Object.keys(storage);
   console.log(recipesId);
@@ -36,7 +37,7 @@ const OrderDetails = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     postUser(userInfo);
-
+    history.push('/thankyou')
   };
 
   const postUser = async (user) => {

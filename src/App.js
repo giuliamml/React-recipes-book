@@ -1,17 +1,17 @@
 import React from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Cart from './components/cart'
+import Cart from "./components/cart";
 
 //components
 import Homepage from "./components/homepage";
 import ProductsListingPage from "./components/ProductsListingPage.js";
 import Navigation from "./components/navigation.js";
-import ProductPage from './components/productPage.js';
+import ProductPage from "./components/productPage.js";
+import OrderCompleted from "./components/orderCompleted";
 
 function App() {
-
-  let id = window.location.pathname.split("/").slice(-1)[0]
+  let id = window.location.pathname.split("/").slice(-1)[0];
   return (
     <div className="App">
       <Router>
@@ -20,6 +20,12 @@ function App() {
         <Route exact path="/recipes" component={ProductsListingPage}></Route>
         <Route exact path="/recipe/:id" component={ProductPage} id={id}></Route>
         <Route exact path="/cart" component={Cart} id={id}></Route>
+        <Route
+          exact
+          path="/thankyou"
+          component={OrderCompleted}
+          id={id}
+        ></Route>
       </Router>
     </div>
   );

@@ -1,9 +1,11 @@
 .order-details-wrapper {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 40% 60%;
 
   .user-form {
+    padding: 10%;
+
     label {
       letter-spacing: 0.1em;
       text-transform: lowercase;
@@ -16,13 +18,18 @@
     form {
       display: flex;
       flex-direction: column;
-
+      padding-top: 5%;
+      padding-bottom: 5%;
+      background-image: url('../images/Shape4.svg'), url('../images/Shape5.svg');
+      background-repeat: no-repeat;
+      background-position: top right, bottom right;
       input {
         border: 1px solid #000000;
         box-sizing: border-box;
         border-radius: 4px;
-        margin: 2%;
         height: 37px;
+        margin-top: 2%;
+        margin-bottom: 2%;
       }
 
       select {
@@ -31,7 +38,9 @@
         border: none;
         width: 20%;
         position: relative;
-        left: 2%;
+        width: 95px;
+        height: 37px;
+        margin-bottom: 2%;
       }
 
       label {
@@ -43,11 +52,10 @@
         line-height: 21px;
         float: left;
         position: relative;
-        left: 2%;
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
       }
-      
 
-      
       button {
         background: #ffc700;
         border: 2px solid #ffc700;
@@ -56,7 +64,38 @@
         height: 38px;
         color: #000000;
         text-transform: uppercase;
+        margin-top: 2%;
       }
     }
+  }
+}
+
+.order-complete {
+  position: relative;
+  width: 100%;
+  height: 76vh;
+  background-image: url("../images/orderComplete.jpg");
+  background-repeat: no-repeat;
+  padding-top:5%;
+  padding-bottom:5%;
+  background-position: center;
+  overflow: hidden;
+  
+
+  h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 84px;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    place-self: center;
+
   }
 }

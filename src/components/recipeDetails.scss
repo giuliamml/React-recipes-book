@@ -6,6 +6,7 @@
   width: 21px;
   height: 21px;
   border-radius: 50%;
+  transform: translate(50%, -50%);
 
   p {
     text-transform: lowercase;
@@ -30,46 +31,109 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    top: 10%;
 
     .recipe-details {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 40% 60%;
       width: 100%;
+      padding: 5%;
+
       .recipe-text {
-        width: 50%;
-        p {
-          font-size: 18px;
-          line-height: 27px;
-          text-transform: lowercase;
-          color: #4b4a4a;
+        padding: 5%;
+        position: relative;
+        top: 10%;
+        ul {
+          padding: 0;
+          li {
+            list-style: none;
+            padding-bottom: 5%;
+            img {
+              display: inline;
+              padding-right: 1%;
+            }
+            p {
+              font-size: 18px;
+              line-height: 27px;
+              text-transform: lowercase;
+              color: #4b4a4a;
+              display: inline;
+            }
+          }
+        }
+        button {
+          background: #ffc700;
+          border: 2px solid #ffc700;
+          box-sizing: border-box;
+          width: 173px;
+          height: 38px;
+          text-transform: uppercase;
+          font-weight: bold;
+          position: relative;
         }
       }
 
       .recipe-img {
         overflow: hidden;
-
+        width: 804px;
+        height: 591px;
         img {
-          width: 100%;
+          width: 90%;
           height: auto;
         }
       }
     }
 
     .recipe-ingredients {
-        width: 100%;
-        height: 100%;
+      width: 100%;
+      height: 100vh;
+      background-image: url("../images/ingredients.jpg");
+      background-repeat: no-repeat;
+
+      .ingredients-heading {
+        position: relative;
+        width: 80%;
+        height: 10%;
+        border-bottom: 1px solid #ffffff;
+        float: right;
+        right: 5%;
+        top:10%;
+        h3 {
+          letter-spacing: 0.1em;
+          text-transform: lowercase;
+          color: #ffffff;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 21px;
+          margin: 0;
+          text-align: center;
+          display: inline;
+          background-color: #ffc700;
+        }
+      }
+
+      hr {
+        width: 60%;
+        position: relative;
+        height: 1px;
+        background-color: #ffffff;
+        float: right;
+        right: 2%;
+        top: 20%;
+      }
+
       ul {
         position: absolute;
-        top:50%;
+        padding: 0;
+        margin: 0;
         right: 10%;
-        
+        bottom: 10%;
+
         li {
           list-style-type: none;
           letter-spacing: 0.1em;
           font-feature-settings: "pnum" on, "lnum" on;
           color: #ffffff;
-          padding:5%;
+          padding: 3%;
         }
       }
     }

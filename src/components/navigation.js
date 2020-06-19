@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./navigation.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import CartCount from './cartCount'
 //media-files
 import cart from "../images/cart.svg";
 
@@ -19,11 +19,12 @@ const Navigation = () => {
         <li id="navigation">gifts</li>
         <li id="navigation">market</li>
         <li id="navigation" className='cart'>
+          <CartCount/>
           <Link to="/cart">
             <img src={cart} />
           </Link>
         </li>{" "}
-        
+
       </ul>
     </div>
   );
