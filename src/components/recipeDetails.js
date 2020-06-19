@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ingredientsBackground from "../images/ingredients.svg";
+import ingredientsBackground from "../images/ingredients.jpg";
 import time from "../images/time.svg";
 import tools from "../images/tools.svg";
 import apple from "../images/apple.svg";
@@ -9,13 +9,14 @@ const RecipeDetails = (props) => {
   let localStorage = window.localStorage;
 
   const [recipe, setRecipe] = useState({});
+  const [ingredients, setIngredients] = useState([]);
   const [cart, setCart] = useState({ stateComponent: false });
 
   const getRecipe = async () => {
     let response = await fetch(`http://localhost:3001/recipes/${id}`);
     let data = await response.json();
-    console.log(data);
     setRecipe(data);
+    setIngredients([...ingredients, ...data.ingredients]);
   };
 
   const handleClick = (event) => {
@@ -61,7 +62,14 @@ const RecipeDetails = (props) => {
           <img src={recipe.image} alt="recipe-img" />
         </div>
       </div>
-      {/* <img src={ingredientsBackground} alt="background" /> */}
+      <div className="recipe-ingredients">
+        <img src={ingredientsBackground} alt="background" />
+        <ul>
+          {ingredients.map((ingredient) => (
+            <li>{ingredient}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

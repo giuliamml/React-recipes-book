@@ -4,7 +4,7 @@ import styles from "./recipeDetails.scss";
 import Footer from "./footer";
 import Offers from "./offers";
 import RecipeDetails from "./recipeDetails";
-import background from "../images/background-nav.svg";
+import background from "../images/background-nav.jpg";
 
 const ProductPage = (props) => {
   console.log(props.match.params.id);

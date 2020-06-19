@@ -4,31 +4,57 @@
   grid-template-columns: 1fr 1fr;
 
   .user-form {
-    display: flex;
-    flex-direction: column;
-    
-
-    input {
-      border: 1px solid #000000;
-      box-sizing: border-box;
-      border-radius: 4px;
-      
-    }
-
-    select {
-      background: #ffc700;
-      border-radius: 4px;
-      border: none;
-    }
-
     label {
-      text-align: center;
       letter-spacing: 0.1em;
       text-transform: lowercase;
       color: #ffc700;
       font-weight: bold;
       font-size: 18px;
       line-height: 21px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin: 2%;
+        height: 37px;
+      }
+
+      select {
+        background: #ffc700;
+        border-radius: 4px;
+        border: none;
+        width: 20%;
+        position: relative;
+        left: 2%;
+      }
+
+      label {
+        letter-spacing: 0.1em;
+        text-transform: lowercase;
+        color: #ffc700;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        float: left;
+        position: relative;
+        left: 2%;
+      }
+
+      button {
+        background: #ffc700;
+        border: 2px solid #ffc700;
+        box-sizing: border-box;
+        width: 173px;
+        height: 38px;
+        color: #000000;
+        text-transform: uppercase;
+      }
     }
   }
 }
