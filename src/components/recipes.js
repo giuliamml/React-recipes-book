@@ -18,10 +18,12 @@ const Recipes = () => {
     console.log(data);
     setRecipes([...recipes, ...data]);
   };
+  
 
   useEffect(() => {
     getData();
   }, []);
+
 
   return (
     <div className="PLP-wrapper">

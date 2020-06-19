@@ -13,6 +13,8 @@ const ProductsListingPage = () => {
       <Footer />
     </div>
   );
+  
 };
+
 
 export default ProductsListingPage;

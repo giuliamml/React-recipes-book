@@ -7,5 +7,6 @@ const CartCount = () => {
       </div>
     );
   };
+  
 
   export default CartCount;

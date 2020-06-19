@@ -51,6 +51,7 @@ function Homepage() {
             <img src={img3} />
           </div>
         </div>
+        
         <div class="content-sections">
           <div className="content-text">
             <img src={fruit} />

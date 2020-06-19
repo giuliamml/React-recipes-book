@@ -23,6 +23,7 @@ const Navigation = () => {
             <img src={cart} />
           </Link>
         </li>{" "}
+        
       </ul>
     </div>
   );

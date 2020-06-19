@@ -19,6 +19,8 @@ const RecipeDetails = (props) => {
     setRecipe(data);
     setIngredients([...ingredients, ...data.ingredients]);
   };
+  
+  
 
   const handleClick = (event) => {
     event.preventDefault();

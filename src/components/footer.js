@@ -3,6 +3,7 @@ import styles from './footer.scss'
 
 const Footer = () => {
   return (
+    
     <div className="footer">
       <ul id="categories">
         <li>{"Categories"}</li>
