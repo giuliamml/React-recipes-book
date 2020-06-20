@@ -6,20 +6,16 @@ import Offers from "./offers";
 import RecipeDetails from "./recipeDetails";
 import background from "../images/background-nav.jpg";
 
-const ProductPage = ({id, cart, setCart}) => {
-  // console.log(props);
-  // let id = props.match.params.id;
-  // let x = {cart, setCart}
-  // console.log(x)
+const ProductPage = (props) => {
+  console.log(props);
+  let id = props.id;
   
-  let props = {id, cart, setCart}
-
-  console.log(props)
+  
 
   return (
     <div className="PDP-wrapper">
       <img src={background} alt="background" />
-      <RecipeDetails id={props.id} props={props}/>
+      <RecipeDetails id={id}/>
       <Offers />
       <Footer />
     </div>

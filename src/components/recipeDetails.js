@@ -10,6 +10,7 @@ const RecipeDetails = (props) => {
   console.log(props);
 
   let id = props.id;
+  console.log(id)
   let localStorage = window.localStorage;
 
   const [recipe, setRecipe] = useState({});
