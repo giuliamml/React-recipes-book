@@ -1,6 +1,7 @@
 import React from 'react'
 
-const CartCount = () => {
+const CartCount = (props) => {
+  console.log(props)
     return (
       <div className="cart-count">
         <p>{localStorage.length}</p>

@@ -7,7 +7,7 @@ import RecipeDetails from "./recipeDetails";
 import background from "../images/background-nav.jpg";
 
 const ProductPage = (props) => {
-  console.log(props.match.params.id);
+  console.log(props);
   let id = props.match.params.id;
   return (
     <div className="PDP-wrapper">

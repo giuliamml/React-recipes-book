@@ -6,6 +6,8 @@ import apple from "../images/apple.svg";
 import CartCount from "./cartCount";
 
 const RecipeDetails = (props) => {
+  console.log(props )
+
   let id = props.id;
   let localStorage = window.localStorage;
 
@@ -20,8 +22,7 @@ const RecipeDetails = (props) => {
     setIngredients([...ingredients, ...data.ingredients]);
   };
 
-  const handleClick = (event) => {
-    event.preventDefault();
+  const handleClick = () => {
 
     let value = localStorage.getItem(id);
     if (!value) {
@@ -38,7 +39,7 @@ const RecipeDetails = (props) => {
 
   return (
     <div>
-      {cart.stateComponent ? <CartCount /> : null}
+      <CartCount/> 
       <div className="recipe-details-wrapper">
         <div className="recipe-details">
           <div className="recipe-text">

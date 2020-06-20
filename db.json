@@ -242,6 +242,26 @@
       "mobileNumber": "07426490423",
       "postcode": "Mackeson Road",
       "id": 2
+    },
+    {
+      "title": "",
+      "firstName": "Giulia",
+      "lastName": "Mummolo",
+      "email": "mail@giuliamummolo.com",
+      "password": "123",
+      "mobileNumber": "07426490423",
+      "postcode": "Mackeson Road",
+      "id": 3
+    },
+    {
+      "title": "",
+      "firstName": "Giulia",
+      "lastName": "Mummolo",
+      "email": "mail@giuliamummolo.com",
+      "password": "1234",
+      "mobileNumber": "07426490423",
+      "postcode": "Mackeson Road",
+      "id": 4
     }
   ]
 }
