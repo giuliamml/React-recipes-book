@@ -20,7 +20,7 @@ function App() {
       <Router>
         <Navigation>
           {cart.stateComponent ? (
-            <CartCount />
+            <CartCount cart={cart.stateComponent} setCart={setCart} />
           ) : null}
         </Navigation>
         <Route exact path="/home" component={Homepage}></Route>
@@ -29,9 +29,9 @@ function App() {
           exact
           path="/recipe/:id"
           component={ProductPage}
-          id={id}
-          cart={cart}
-          setCart={setCart}
+          component={() => (
+            <ProductPage id={id} cart={cart.stateComponent} setCart={setCart} />
+          )}
         ></Route>
         <Route exact path="/cart" component={Cart} id={id}></Route>
         <Route

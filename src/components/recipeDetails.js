@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import ingredientsBackground from "../images/ingredients.jpg";
+import { useHistory } from "react-router-dom";
 import time from "../images/time.svg";
 import tools from "../images/tools.svg";
 import apple from "../images/apple.svg";
 import CartCount from "./cartCount";
 
 const RecipeDetails = (props) => {
-  console.log(props )
+  console.log(props);
 
   let id = props.id;
   let localStorage = window.localStorage;
 
   const [recipe, setRecipe] = useState({});
   const [ingredients, setIngredients] = useState([]);
-  const [cart, setCart] = useState({ stateComponent: false });
 
   const getRecipe = async () => {
     let response = await fetch(`http://localhost:3001/recipes/${id}`);
@@ -22,15 +22,15 @@ const RecipeDetails = (props) => {
     setIngredients([...ingredients, ...data.ingredients]);
   };
 
-  const handleClick = () => {
 
+
+  const handleClick = () => {
     let value = localStorage.getItem(id);
     if (!value) {
       localStorage.setItem(id, 1);
     } else {
       localStorage.setItem(id, parseInt(value) + 1);
     }
-    setCart({ stateComponent: true });
   };
 
   useEffect(() => {
@@ -39,7 +39,6 @@ const RecipeDetails = (props) => {
 
   return (
     <div>
-      <CartCount/> 
       <div className="recipe-details-wrapper">
         <div className="recipe-details">
           <div className="recipe-text">

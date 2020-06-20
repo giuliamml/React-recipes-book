@@ -5,6 +5,7 @@ import styles from "./orderDetails";
 import background from "../images/background-nav.jpg";
 
 const OrderCompleted = () => {
+  localStorage.clear()
   return (
     <div>
       <img src={background} alt="background" />
